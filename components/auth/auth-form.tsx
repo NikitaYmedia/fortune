@@ -51,7 +51,7 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
       <div className="absolute right-4 top-4"><LanguageSwitcher /></div>
       <div className="card w-full max-w-sm">
         <div className="mb-4 flex items-center gap-2 font-semibold">
-          <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-pri to-sec" aria-hidden />
+            <img src="/logo.png" alt="" className="h-7 w-7 rounded-lg" />
           {t('app.name')}
         </div>
         <h1 className="text-xl font-medium">{t(isLogin ? 'auth.login' : 'auth.register')}</h1>

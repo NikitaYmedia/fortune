@@ -28,7 +28,7 @@ export function ProjectsHome() {
     <div className="mx-auto max-w-6xl p-4 md:p-8">
       <header className="mb-6 flex flex-wrap items-center gap-3">
         <span className="flex items-center gap-2 font-semibold">
-          <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-pri to-sec" aria-hidden />
+            <img src="/logo.png" alt="" className="h-7 w-7 rounded-lg" />
           {t('app.name')}
         </span>
         <span className="flex-1" />

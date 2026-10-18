@@ -48,7 +48,7 @@ export function Shell({ projectId, children }: { projectId: string; children: Re
         )}
       >
         <Link href="/projects" className="mb-4 flex items-center gap-2 px-2 py-1 font-semibold" title={t('projects.all')}>
-          <span className="h-8 w-8 shrink-0 rounded-xl bg-gradient-to-br from-pri to-sec" aria-hidden />
+            <img src="/logo.png" alt="" className="h-8 w-8 shrink-0 rounded-xl" />
           <span className={clsx(collapsed && 'md:hidden')}>Neemo</span>
         </Link>
         <nav aria-label="Main" className="flex flex-col gap-1">
