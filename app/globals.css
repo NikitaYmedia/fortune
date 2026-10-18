@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0B0812; --side: #100B1B; --card: #1A1428; --elev: #241B35;
+  --pri: #7138F5; --sec: #A78BFA; --yel: #FDE047; --ok: #10B981;
+  --fg: #F7F5FC; --mute: #A49BB5; --line: rgba(255, 255, 255, 0.08);
+  --glow-a: rgba(113, 56, 245, 0.30); --glow-b: rgba(79, 70, 229, 0.18);
+  --shadow: 0 14px 34px -18px rgba(0, 0, 0, 0.7);
+  --sheen: rgba(255, 255, 255, 0.035);
+  color-scheme: dark;
+}
+:root[data-theme='light'] {
+  --bg: #F6F3FC; --side: #FFFFFF; --card: #FFFFFF; --elev: #F0EAFB;
+  --fg: #1B1230; --mute: #6B5F82; --line: rgba(20, 10, 50, 0.12);
+  --glow-a: rgba(113, 56, 245, 0.14); --glow-b: rgba(79, 70, 229, 0.08);
+  --shadow: 0 10px 28px -16px rgba(60, 30, 120, 0.35);
+  --sheen: rgba(255, 255, 255, 0);
+  color-scheme: light;
+}
+body {
+  color: var(--fg);
+  background:
+    radial-gradient(900px 520px at 88% -8%, var(--glow-a), transparent 62%),
+    radial-gradient(720px 520px at -6% 108%, var(--glow-b), transparent 62%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-line p-4;
+    background: linear-gradient(180deg, var(--sheen), transparent 55%), var(--card);
+    box-shadow: var(--shadow);
+  }
+  .input { @apply w-full rounded-xl border border-line bg-bg px-3 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-yel; }
+  .label { @apply mb-1 mt-3 block text-xs text-mute; }
+  .badge { @apply rounded-full px-2 py-0.5 text-xs; }
+  .nav-active {
+    background: linear-gradient(90deg, rgba(113, 56, 245, 0.38), rgba(113, 56, 245, 0.04));
+    box-shadow: inset 2px 0 0 var(--sec);
+  }
+  .topbar { background: color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter: blur(12px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
