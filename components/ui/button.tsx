@@ -4,7 +4,7 @@ import type { ButtonHTMLAttributes } from 'react';
 type Variant = 'default' | 'primary' | 'danger' | 'ghost';
 const variants: Record<Variant, string> = {
   default: 'border border-line bg-elev hover:border-sec',
-  primary: 'bg-gradient-to-br from-pri to-indigo-600 text-white shadow-[0_8px_20px_-8px_rgba(113,56,245,.8)] hover:opacity-90',
+  primary: 'bg-gradient-to-br from-[#5B21F0] to-[#B24BFF] text-white shadow-[0_8px_24px_-8px_rgba(122,43,255,.9)] hover:opacity-90',
   danger: 'border border-red-400/40 bg-elev text-red-400 hover:border-red-400',
   ghost: 'hover:bg-elev',
 };
